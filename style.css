@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-size: 15pt;
+}
+
+/* flex box */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end */
+
+/* the background */
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+/* end */
+
+
+/* the container game  */
+#card-game {
+    background: #eee;
+    width: 90%;
+    height: 400px;
+    margin-top: 4em;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-flow: column;
+    border: 2px solid #595B6D;
+    position: relative;
+    z-index: 2;
+}
+/* end */
+
+
+
+#card-game > div{
+    width: 100%
+}
+
+#card-game > div:nth-child(1) {
+    background: #595B6D;
+    height: 40%;
+}
+
+#card-game > div:nth-child(1) > div {
+    width: 100%;
+    height: 100%;
+    color: #eee
+}
+
+#card-game > div:nth-child(2) {
+    height: 600px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    margin-top: -2.5em;
+    font-size: 30px;
+    z-index: 1
+}
+
+#card-game > div:nth-child(3) {
+    background: #8B8C96;
+    height: 60%;
+    flex-flow: column;
+}
+
+#card-game > div:nth-child(3) > div {
+    width: 90%;
+    height: 50px;
+    margin: 0.3em;
+    border-radius: 12px;
+    background: #eee
+}
+
+/* animation of click on start */
+
+.start-Animation {
+    animation: animate 1s ease 1 both;
+}
+
+@keyframes animate {
+    from{
+        height: 1000px;
+        width: 1000px;
+        border-radius: 0;
+    }to {
+        border-radius: 50%;
+        height: 0px;
+        width: 0px;
+    }
+}
+/* end */
+
+#first-frame {
+    flex-flow: column;
+}
+
+#first-frame > h5 {
+    margin-top: 1em;
+}
+
+#user-name {
+    height: 30px;
+    width: 200px;
+    font-size: 17px;
+    text-align: center;
+    border: 0;
+    box-shadow: 0px 1px #2F3147;
+}
+
+#start {
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/*    end.    */
+
+
+#list-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -5em;
+    margin-bottom: 10em
+}
+
+#contentlist {
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#contentlist > ul {
+    list-style: none;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#contentlist > ul > li {
+    margin-top: 1em;
+    border: 1px solid black;
+    
+    padding: 20px;
+}
